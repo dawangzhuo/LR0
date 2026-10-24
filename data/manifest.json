@@ -1,0 +1,31 @@
+{
+  "datasets": {
+    "digits": {
+      "source": "sklearn.datasets.load_digits",
+      "source_package": "scikit-learn",
+      "source_version": "1.9.1",
+      "original_records": 1797,
+      "selected_records": 1797,
+      "excluded_records": 0,
+      "exclusion_reason": "No records excluded.",
+      "split_rule": {
+        "stratified": true,
+        "split_seed": 0,
+        "test_fraction": 0.2,
+        "validation_fraction_of_remaining": 0.25
+      },
+      "split_sizes": {
+        "train": 1077,
+        "val": 360,
+        "test": 360
+      },
+      "preprocessing": "Convert features to float32 and divide by 16.",
+      "files": {
+        "split.json": {
+          "sha256": "6292b3d0d41cf7b302d5f7afbfbc93b712e8f74fc19b4ab62b67186417946cae",
+          "records": 1797
+        }
+      }
+    }
+  }
+}

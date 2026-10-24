@@ -1,0 +1,30 @@
+# Python environments and caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Experiment outputs
+runs/
+mlruns/
+mlartifacts/
+
+# Local databases and temporary database files
+mlflow.db*
+optuna.db*
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Model weights
+*.pt
+*.pth
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Local editor settings
+.vscode/
