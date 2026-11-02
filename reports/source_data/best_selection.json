@@ -1,0 +1,14 @@
+{
+  "study": "lr0_search",
+  "best_trial": 16,
+  "best_val_acc": 0.975,
+  "best_params": {
+    "n_layers": 2,
+    "hidden": 476,
+    "dropout": 0.4912568580464095,
+    "lr": 0.01176934483518966,
+    "weight_decay": 2.7897020786759427e-05,
+    "batch_size": 64
+  },
+  "source_commit": "92f0ae7dd8c3c35956953620b502f91879cc8cfd"
+}

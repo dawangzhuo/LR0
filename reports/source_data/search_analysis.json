@@ -1,0 +1,39 @@
+{
+  "study": "lr0_search",
+  "source_commit": "92f0ae7dd8c3c35956953620b502f91879cc8cfd",
+  "split_sha256": "6292b3d0d41cf7b302d5f7afbfbc93b712e8f74fc19b4ab62b67186417946cae",
+  "total_trials": 40,
+  "state_counts": {
+    "COMPLETE": 13,
+    "PRUNED": 27,
+    "FAIL": 0
+  },
+  "best_trial": 16,
+  "best_val_accuracy": 0.975,
+  "best_params": {
+    "n_layers": 2,
+    "hidden": 476,
+    "dropout": 0.4912568580464095,
+    "lr": 0.01176934483518966,
+    "weight_decay": 2.7897020786759427e-05,
+    "batch_size": 64
+  },
+  "full_epoch_budget": 1200,
+  "executed_epochs": 535,
+  "unexecuted_epochs": 665,
+  "unexecuted_epoch_fraction": 0.5541666666666667,
+  "measured_training_seconds": 16.18686719867401,
+  "estimated_pruning_saved_seconds": 17.443897899376072,
+  "estimated_pruning_time_saving_fraction": 0.5186887021011447,
+  "time_estimate_method": "For each pruned trial, multiply its unexecuted epochs by its observed mean epoch time. This is an estimate, not a measured no-pruning counterfactual.",
+  "timing_scope": "Training and validation epoch time only; excludes setup, database, and artifact logging overhead.",
+  "importance_note": "Estimated using completed trials only. Limited evidence; not a causal effect.",
+  "parameter_importance": {
+    "hidden": 0.2887604960280589,
+    "weight_decay": 0.23962476600016497,
+    "lr": 0.22490012556373623,
+    "dropout": 0.19104185141987193,
+    "batch_size": 0.052073186838207344,
+    "n_layers": 0.0035995741499607447
+  }
+}

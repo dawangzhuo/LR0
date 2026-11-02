@@ -1,0 +1,62 @@
+{
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "source_conditions": {
+    "commit": "27bfd7275d7ae521b07c60732ee341bc96f00f16",
+    "split_sha256": "6292b3d0d41cf7b302d5f7afbfbc93b712e8f74fc19b4ab62b67186417946cae",
+    "split_seed": 0,
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "versions": {
+      "torch": "2.14.1",
+      "scikit-learn": "1.9.1",
+      "optuna": "5.0.0",
+      "mlflow": "3.17.0",
+      "numpy": "2.4.6",
+      "PyYAML": "6.0.3"
+    },
+    "device": "cpu",
+    "num_threads": 1
+  },
+  "baseline_statistics_source": "runs\\analysis_base_20261024_141855_521549\\base_statistics.json",
+  "baseline_accuracy_range_pp": 0.8333333333333415,
+  "search_best_trial": 16,
+  "search_best_val_acc": 0.975,
+  "best_new_seeds_mean_val_acc": 0.9711111111111111,
+  "best_new_seeds_mean_test_acc": 0.9677777777777777,
+  "delta_val_pp": {
+    "all": [
+      1.9444444444444486,
+      1.9444444444444375,
+      0.8333333333333304,
+      2.2222222222222254,
+      1.6666666666666718
+    ],
+    "min": 0.8333333333333304,
+    "median": 1.9444444444444375,
+    "max": 2.2222222222222254
+  },
+  "delta_test_pp": {
+    "all": [
+      2.2222222222222254,
+      1.9444444444444486,
+      2.500000000000002,
+      2.2222222222222254,
+      1.1111111111111183
+    ],
+    "min": 1.1111111111111183,
+    "median": 2.2222222222222254,
+    "max": 2.500000000000002
+  },
+  "test_corrected_total": 51,
+  "test_spoiled_total": 15,
+  "test_paired_observations": 1800,
+  "unique_test_images": 360,
+  "all_test_deltas_positive": true,
+  "all_test_deltas_exceed_baseline_range": true
+}

@@ -1,0 +1,32 @@
+{
+  "series": "base_seeds",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source_runs": [
+    "20261024_134256_8fea25c12568",
+    "20261024_134326_9d1852d8b727",
+    "20261024_134338_d9cd901df352",
+    "20261024_134416_ae89f8608341",
+    "20261024_134521_7e90ab6e7405"
+  ],
+  "source_commit": "5e93d20b3cf3c295f3761983e290d6b357caa83e",
+  "split_sha256": "6292b3d0d41cf7b302d5f7afbfbc93b712e8f74fc19b4ab62b67186417946cae",
+  "validation_samples_per_run": 360,
+  "accuracy_min": 0.9527777777777777,
+  "accuracy_median": 0.9555555555555556,
+  "accuracy_max": 0.9611111111111111,
+  "accuracy_range_pp": 0.8333333333333415,
+  "paired_comparison": {
+    "reference_seed": 1,
+    "comparison_seed": 2,
+    "samples": 360,
+    "corrected": 1,
+    "spoiled": 3,
+    "accuracy_delta": -0.005555555555555556
+  }
+}
