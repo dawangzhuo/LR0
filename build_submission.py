@@ -1,5 +1,6 @@
 """Create a verified submission ZIP without changing original experiment files."""
 import argparse
+from contextlib import closing
 import csv
 import hashlib
 import json
@@ -75,10 +76,13 @@ def main():
                     entries['LR0/' + p.relative_to(ROOT).as_posix()] = p
         for n in ['mlflow.db', 'optuna.db']:
             target = temp / n
-            with sqlite3.connect((ROOT / n).as_uri() + '?mode=ro', uri=True) as source:
-                with sqlite3.connect(target) as destination:
+            # SQLite 的事务上下文不会关闭连接；显式关闭后 Windows 才能清理临时文件。
+            with closing(sqlite3.connect((ROOT / n).as_uri() + '?mode=ro', uri=True)) as source:
+                with closing(sqlite3.connect(target)) as destination:
                     source.backup(destination)
-                    if destination.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
+                    with closing(destination.execute('PRAGMA integrity_check')) as cursor:
+                        integrity = cursor.fetchone()[0]
+                    if integrity != 'ok':
                         raise RuntimeError('Database integrity check failed: ' + n)
             entries['LR0/' + n] = target
         bundle = temp / 'repository.bundle'
